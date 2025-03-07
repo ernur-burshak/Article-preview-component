@@ -161,3 +161,37 @@ main {
     gap: 6.5rem;
   }
 }
+
+@media (min-width: 64.0625rem) {
+  main {
+    width: 45.625rem;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0rem;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .image {
+    width: 285px;
+    height: 280px;
+    background-image: url(../images/drawers.jpg);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+  }
+
+  .description-container {
+    margin-right: 0rem;
+    margin-left: 0rem;
+    height: auto;
+    width: 22.8125rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .author-container {
+    gap: 10rem;
+  }
+}
