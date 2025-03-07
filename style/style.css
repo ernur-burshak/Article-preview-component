@@ -14,7 +14,7 @@
 
 html,
 body {
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,7 +96,6 @@ main {
   background-size: cover;
   background-position: center;
   background-image: url(../images/avatar-michelle.jpg);
-  border: 1px solid #a775f1;
 }
 
 .author-name {
@@ -127,4 +126,38 @@ main {
 
 .attribution {
   display: none;
+}
+
+@media (min-width: 48rem) and (max-width: 64rem) {
+  main {
+    width: 38rem;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0rem;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .image {
+    width: 229px;
+    height: 346px;
+    background-image: url(../images/drawers.jpg);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+  }
+
+  .description-container {
+    margin-right: 0rem;
+    margin-left: 0rem;
+    height: auto;
+    width: 19.4375rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .author-container {
+    gap: 6.5rem;
+  }
 }
