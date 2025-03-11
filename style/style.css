@@ -12,6 +12,22 @@
   padding: 0;
 }
 
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+img,
+ion-icon {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
 html,
 body {
   min-height: 100vh;
@@ -114,14 +130,82 @@ main {
   color: #9daec2;
 }
 
+.share {
+  position: relative;
+}
+
 .share-button {
-  height: 32px;
-  width: 32px;
-  background-image: url(../images/icon-share.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 50%;
-  border: none;
+  background: #ecf2f8;
+  padding: 6px;
+  border-radius: 20px;
+  font-size: 20px;
+  color: #6e8098;
+  transition: all 0.25s ease;
+}
+
+.share-button:hover,
+.share-button.active {
+  background: #6e8098;
+  color: #ecf2f8;
+}
+
+.share-option {
+  /**
+   * variable for transforming `.share-option` box 
+   * without repeating all transform value
+   */
+  --scale: 0;
+  --translateX: -50%;
+  --translateY: 0;
+
+  background: #48556a;
+  position: absolute;
+  bottom: calc(100% + 28px);
+  left: 50%;
+  transform: translate(var(--translateX), var(--translateY)) scale(var(--scale));
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px -5px #0003;
+  transform-origin: bottom;
+  visibility: hidden;
+  transition: all 0.25s ease;
+}
+
+.share-option.active {
+  --scale: 1;
+  visibility: visible;
+}
+
+.share-option::after {
+  content: "";
+  background: hsl(217, 19%, 35%);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -60%) rotate(45deg);
+}
+
+.share-option span {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #9daec2;
+  margin-right: 5px;
+}
+
+.share-option ion-icon {
+  font-size: 22px;
+}
+
+.share-option ion-icon:hover,
+.main-description:hover,
+.author-name:hover {
+  filter: invert(1);
 }
 
 .attribution {
