@@ -131,7 +131,8 @@ main {
 }
 
 .share {
-  position: relative;
+  position: static;
+  z-index: 1;
 }
 
 .share-button {
@@ -244,6 +245,10 @@ main {
   .author-container {
     gap: 6.5rem;
   }
+
+  .share {
+    position: relative;
+  }
 }
 
 @media (min-width: 64.0625rem) {
@@ -277,5 +282,9 @@ main {
 
   .author-container {
     gap: 10rem;
+  }
+
+  .share {
+    position: relative;
   }
 }
