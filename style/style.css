@@ -299,7 +299,7 @@ main {
     --translateX: 0;
     --translateY: 100%;
 
-    inset: -20px -28px;
+    inset: -20px -30px;
     padding: 17px 30px;
     z-index: -1;
     border-radius: 0 0 10px 10px;
