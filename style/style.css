@@ -279,3 +279,37 @@ main {
     gap: 10rem;
   }
 }
+
+@media (max-width: 48rem) {
+  .author-container {
+    position: relative;
+  }
+
+  .share {
+    position: static;
+    z-index: 1;
+  }
+
+  .share-option {
+    /**
+     * variable for transforming `.share-option` box 
+     * without repeating all transform value
+     */
+    --scale: 1;
+    --translateX: 0;
+    --translateY: 100%;
+
+    inset: -20px -28px;
+    padding: 17px 30px;
+    z-index: -1;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .share-option.active {
+    --translateY: 0;
+  }
+
+  .share-option::after {
+    height: 0;
+  }
+}
