@@ -33,8 +33,10 @@ Desktop active state:
 ![](./design/desktop-active-state.jpg)
 
 Mobile design:
+
 ![](./design/mobile-design.jpg)
 Mobile active state:
+
 ![](./design/mobile-active-state.jpg)
 
 ### Links
